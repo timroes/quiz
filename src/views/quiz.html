@@ -1,0 +1,39 @@
+<button type="button" class="overlaybutton addteam" ng-click="addTeam()">
+	<i class="icon-user-add"></i>
+	<span class="overlaybutton__label">Add Team</span>
+</button>
+
+<quiz-input callback="onKeyPress($event)"></quiz-input>
+
+<div class="gamearea" ng-if="phase !== 'end'">
+
+	<h1 class="gamearea__title" ng-show="phase === 'title'">{{quiz.title}}</h1>
+
+	<div class="gamearea__interlude" ng-show="question.type === 'interlude'">
+		<h1 class="gamearea__title">{{question.title}}</h1>
+		<h2 class="gamearea__subtitle">{{question.subtitle}}</h2>
+	</div>
+
+	<div class="gamearea__question" ng-show="question.type === 'image'">
+		<h2 class="gamearea__label">{{question.label}}</h2>
+		<img class="gamearea__image" ng-src="{{ questionImg }}">
+		<div class="gamearea__source" ng-show="question.source">{{ question.source }}</div>
+		<div class="gamearea__solution" ng-class="{'gamearea__solution--hidden': phase !== 'solution'}">
+			{{solution}}
+		</div>
+	</div>
+
+
+</div>
+
+<div class="teams" ng-if="phase !== 'end'">
+	<quiz-teambox team="team" guessing="team === guessingTeam" ng-repeat="team in teams"></quiz-teambox>
+</div>
+
+
+<table class="results" ng-if="phase === 'end'">
+	<tr class="results__team" ng-class="{ 'results__team--winner': team.points === winningPoints }" ng-repeat="team in teams | orderBy:'-points'">
+		<td>{{team.name}}</td>
+		<td class="results__points">{{team.points}}</td>
+	</tr>
+</table>

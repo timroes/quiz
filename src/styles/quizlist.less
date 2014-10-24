@@ -1,0 +1,22 @@
+@import 'mixins';
+
+.quizlist {
+	text-align: center;
+}
+.quizlist__link {
+	.text-color();
+	display: block;
+	border: 1px solid #AAA;
+	border-radius: 5px;
+	padding: 0.5em 1em;
+	font-size: 1.3rem;
+	background-color: #FFF;
+	text-decoration: none;
+	margin-top: 2rem;
+}
+
+.quizlist__link:hover,
+.quizlist__link:focus {
+	background-color: #0099CC;
+	color: #FFF;
+}

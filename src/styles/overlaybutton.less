@@ -1,0 +1,40 @@
+@import "mixins";
+
+.overlaybutton {
+	.text-color();
+	display: flex;
+	position: absolute;
+	text-align: left;
+	border: none;
+	background: none;
+	font-size: 1.2rem;
+	opacity: 0.2;
+	transition: opacity 0.3s ease-in-out;
+	outline: none;
+	cursor: pointer;
+	z-index: 100;
+}
+
+.overlaybutton:hover,
+.overlaybutton:focus {
+	opacity: 0.8;
+}
+
+.overlaybutton:hover .overlaybutton__label,
+.overlaybutton:focus .overlaybutton__label {
+	opacity: 1;
+}
+
+.overlaybutton:active {
+	.highlight-color();
+}
+
+.overlaybutton--right {
+	flex-direction: row-reverse;
+}
+
+.overlaybutton__label {
+	transition: opacity 0.3s ease-in-out;
+	opacity: 0;
+	margin: 0 0.3em;
+}

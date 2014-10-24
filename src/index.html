@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="devquiz">
+<head>
+	<title>DevQuiz</title>
+	<script type="text/javascript" src="libs/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="libs/angular.min.js"></script>
+	<script type="text/javascript" src="libs/angular-animate.min.js"></script>
+	<script type="text/javascript" src="libs/angular-route.min.js"></script>
+	<script type="text/javascript" src="libs/angular-local-storage.min.js"></script>
+	<script type="text/javascript" src="libs/ngDialog.min.js"></script>
+	<script type="text/javascript" src="scripts/app.min.js"></script>
+	<script type="text/javascript" src="scripts/templates.js"></script>
+	<link rel="stylesheet" href="libs/ngDialog.min.css">
+	<link rel="stylesheet" href="libs/ngDialog-theme-default.min.css">
+	<link rel="stylesheet" href="styles/app.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,300italic,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
+	<link href="assets/icons/css/icons.css" rel="stylesheet">
+</head>
+<body ng-controller="rootController">
+
+	<button type="button" class="overlaybutton overlaybutton--right settings" ng-click="showConfig()">
+		<i class="icon-config"></i>
+		<span class="overlaybutton__label">Settings</span>
+	</button>
+
+	<div ng-view class="viewcontainer"></div>
+
+</body>
+</html>

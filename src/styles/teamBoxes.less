@@ -1,0 +1,66 @@
+@import "mixins";
+
+.teambox {
+	flex: 0 1 16rem;
+	position: relative;
+	text-align: left;
+	vertical-align: top;
+	background-color: #FFF;
+	box-shadow: 0 0 5px #AAA;
+	padding: 0.3em 0.7em;
+}
+
+.teambox--correct {
+	background-color: #9C0;
+}
+
+.teambox--wrong {
+	background-color: #F44;
+}
+
+.teambox--correct-remove,
+.teambox--wrong-remove {
+	transition: background-color 0.5s ease-out;
+}
+
+.teambox.active {
+	background-color: #70CBEC;
+}
+
+.teambox.blocked {
+	opacity: 0.5;
+}
+
+.teambox .blockedtimer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	z-index: 50;
+	background-color: #CC0000;
+}
+
+.teambox .teamname {
+	.text-color();
+	text-align: center;
+	font-weight: 300;
+	font-size: 2rem;
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.teambox .points {
+	.text-color();
+	margin-top: 1rem;
+	text-align: center;
+	font-size: 2.5rem;
+	font-weight: 500;
+}
+
+.teambox__settings {
+	bottom: 0.3em;
+	right: 0.3em;
+}
+

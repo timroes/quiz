@@ -1,0 +1,29 @@
+{
+	"title": "Programmiersprachen",
+	"items": [
+		{
+			"type": "interlude",
+			"title": "Leicht",
+			"subtitle": "2 Punkte"
+		},
+		{
+			"type": "image",
+			"label": "Programmiersprachen",
+			"image": "imgs/quiz3.jpg",
+			"solution": "C#",
+			"points": 2
+		},
+		{
+			"type": "interlude",
+			"title": "Mittel",
+			"subtitle": "5 Punkte"
+		},
+		{
+			"type": "image",
+			"label": "Welche Programmiersprache ist das?",
+			"image": "imgs/quiz2.jpg",
+			"solution": "fire, water, buuuuuuuuuurn",
+			"points": 3
+		}
+	]
+}

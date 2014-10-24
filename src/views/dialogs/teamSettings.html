@@ -1,0 +1,15 @@
+<div class="config">
+	<h1 class="config__title">Team Settings</h1>
+	<p class="config__hint">All settings are stored automatically.</p>
+	<label class="config__row">
+		<span class="config__label">Name:</span>
+		<input type="text" ng-model="team.name" class="config__input" placeholder="Name">
+	</label>
+	<label class="config__row">
+		<span class="config__label">Points:</span>
+		<input type="number" ng-model="team.points" class="config__input" placeholder="Points" required>
+	</label>
+	<key-config class="config__key" label="Set Buzzer Key" ng-model="team.key"></key-config>
+	<hr class="config__separator"></hr>
+	<button type="button" class="config__button config__button--delete" ng-click="deleteTeam(team)">Delete Team</button>
+</div>

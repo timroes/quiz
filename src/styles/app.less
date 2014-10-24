@@ -1,0 +1,125 @@
+@import "mixins";
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html, body {
+	height: 100%;
+}
+body {
+	background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+	font-family: 'Roboto', sans-serif;
+	user-select: none;
+}
+
+.viewcontainer {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.gamearea {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.gamearea__title {
+	.highlight-color();
+	text-align: center;
+	font-size: 5rem;
+	font-weight: 400;
+}
+
+.gamearea__subtitle {
+	color: #666;
+	font-size: 3rem;
+	font-weight: 300;
+}
+
+.gamearea__interlude,
+.gamearea__question {
+	text-align: center;
+}
+
+.gamearea__question {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 3.5rem 0 0;
+}
+
+.gamearea__label {
+	.text-color();
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	flex: 0 0 auto;
+}
+
+.gamearea__image {
+	max-width: 90%;
+ }
+
+.gamearea__solution {
+	.text-color();
+	font-size: 2.5rem;
+	margin-top: 2rem;
+	flex: 0 0 auto;
+}
+
+.gamearea__solution--hidden {
+	visibility: hidden;
+}
+
+.gamearea__source {
+	padding-top: 0.5em;
+	flex: 0 0 auto;
+	color: #AAA;
+	margin-right: 1rem;
+	align-self: flex-end;
+}
+
+.teams {
+	flex: 0 1 auto;
+	align-self: stretch;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	padding: 2rem 1rem;
+}
+
+.results {
+	border-spacing: 2.5rem;
+	flex: 0 0 auto;
+	font-size: 3.5rem;
+}
+
+.results__team--winner {
+	.highlight-color();
+	font-size: 5rem;
+	font-weight: 500;
+}
+
+.results__points {
+	text-align: right;
+	padding-left: 5rem;
+}
+
+.settings {
+	top: 1em;
+	right: 1em;
+}
+
+.addteam {
+	top: 1em;
+	left: 1em;
+}

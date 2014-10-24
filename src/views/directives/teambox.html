@@ -1,0 +1,8 @@
+<div class="teambox" ng-class="{active: guessing, blocked: team.blocked}">
+	<div class="blockedtimer" ng-show="team.blocked"></div>
+	<div class="teamname">{{team.name}}</div>
+	<div class="points">{{team.points}}</div>
+	<button type="button" class="overlaybutton overlaybutton--right teambox__settings" ng-click="showTeamSettings()">
+		<i class="icon-config"></i>
+	</button>
+</div>
