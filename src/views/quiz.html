@@ -16,7 +16,7 @@
 
 	<div class="gamearea__question" ng-show="question.type === 'image'">
 		<h2 class="gamearea__label">{{question.label}}</h2>
-		<img class="gamearea__image" ng-src="{{ questionImg }}">
+		<autofit-img class="gamearea__image" src="questionImg"></autofit-img>
 		<div class="gamearea__source" ng-show="question.source">{{ question.source }}</div>
 		<div class="gamearea__solution" ng-class="{'gamearea__solution--hidden': phase !== 'solution'}">
 			{{solution}}
