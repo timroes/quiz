@@ -64,13 +64,19 @@ gulp.task('package', ['build'], function() {
 		.pipe(gulp.dest('dist'));
 });
 
+gulp.task('package-noquiz', ['build'], function() {
+	return gulp.src(['build/**', '!build/quizes/**', 'build/quizes/.keep'], { base: 'build' })
+		.pipe(zip(pack.name + '-' + pack.version + '.zip'))
+		.pipe(gulp.dest('dist'));
+});
+
 gulp.task('python', function() {
 	return gulp.src('src/**/*.py')
 		.pipe(gulp.dest('build'));
 });
 
 gulp.task('quizes', function() {
-	return gulp.src('quizes/**')
+	return gulp.src(['quizes/**', 'quizes/.keep'])
 		.pipe(gulp.dest('build/quizes/'));
 });
 
