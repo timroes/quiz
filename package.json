@@ -1,5 +1,5 @@
 {
-  "name": "devquiz",
+  "name": "quiz",
   "version": "0.1.0",
   "description": "",
   "main": "src/index.html",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tim Roes <mail@timroes.de>",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "devDependencies": {
     "fs": "0.0.2",
     "gulp": "^3.8.8",
