@@ -15,7 +15,7 @@ Unzip the file to a folder of your choice. You can now create multiple quizes
 in the `quizes` subdirectory (see below).
 
 To start the game, execute the `server.py` script. It will output an URL, that you
-can now open in a modern browser (most browsers will go into fullscreen on F11).
+can now open in a modern browser (most browsers will go into fullscreen on <kbd>F11</kbd>).
 
 ### Create quizes
 
@@ -61,7 +61,7 @@ When opening the game URL you can choose one of the quizes you created.
 
 On the top right of the screen you can open the **Settings** dialog.
 You can set the keys used to control the game in there. These keys will be
-referred to as `next`, `correct`, `wrong` and `end game` key later.
+referred to as <kbd>next</kbd>, <kbd>correct</kbd>, <kbd>wrong</kbd> and <kbd>end game</kbd> key later.
 
 Settings will be saved even when you refresh, restart your browser or the server.
 
@@ -78,18 +78,18 @@ or delete the team from the game.
 
 While you are in a game, you can control the game as follows:
 
-Press `next` during the title screen, an *interlude* or when a solution is shown to jump to 
-the next question. When pressing `next` while a question is shown, it will show the solution
+Press <kbd>next</kbd> during the title screen, an *interlude* or when a solution is shown to jump to 
+the next question. When pressing <kbd>next</kbd> while a question is shown, it will show the solution
 without awarding the points to any team.
 
 When a question is shown the teams can press their buzzer keys if they want to solve it.
 The team box of the team, that buzzered first will be colored. If the team answered correctly
-press the `correct` key. The team will be awared by the specific amount of points and the
-answer will be shown. If the team answered wrong press the `wrong` key. The team will be
+press the <kbd>correct</kbd> key. The team will be awared by the specific amount of points and the
+answer will be shown. If the team answered wrong press the <kbd>wrong</kbd> key. The team will be
 blocked from buzzing for a specific amount of time (indicated by a red progress line in the team
 box).
 
-If either the last question has been reached or at any time you press the `end game` button,
+If either the last question has been reached or at any time you press the <kbd>end game</kbd> button,
 the game ends and the result will be shown.
 
 How to develop
