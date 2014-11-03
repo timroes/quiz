@@ -78,7 +78,7 @@ or delete the team from the game.
 
 While you are in a game, you can control the game as follows:
 
-Press <kbd>next</kbd> during the title screen, an *interlude* or when a solution is shown to jump to 
+Press <kbd>next</kbd> during the title screen, an *interlude* or when a solution is shown to jump to
 the next question. When pressing <kbd>next</kbd> while a question is shown, it will show the solution
 without awarding the points to any team.
 
@@ -95,11 +95,14 @@ the game ends and the result will be shown.
 How to develop
 --------------
 
-*Requirements: NodeJS, Modern Browser*
+*Requirements: NodeJS, npm, Modern Browser*
 
 To develop the game make sure you have NodeJS and gulp (`npm install -g gulp`) installed.
 
+Using Ubuntu you also need the nodejs-legacy package.
+
 Install all dependencies with `npm install` in side the source folder.
+(gulp-autoprefixer gulp-concat gulp-debug gulp-jshint gulp-less merge-stream gulp-minify-css gulp-ng-annotate gulp-rimraf gulp-sass gulp-sourcemaps gulp-angular-templatecache gulp-uglify gulp-webserver gulp-zip)
 
 Use `gulp` or `gulp serve` to run the game and watch for changes (except changes on the quizes).
 
