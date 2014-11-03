@@ -101,8 +101,7 @@ To develop the game make sure you have NodeJS and gulp (`npm install -g gulp`) i
 
 Using Ubuntu you also need the nodejs-legacy package.
 
-Install all dependencies with `npm install` in side the source folder.
-(gulp-autoprefixer gulp-concat gulp-debug gulp-jshint gulp-less merge-stream gulp-minify-css gulp-ng-annotate gulp-rimraf gulp-sass gulp-sourcemaps gulp-angular-templatecache gulp-uglify gulp-webserver gulp-zip)
+All dependencies will be installed automatically if you do a `npm install` in the root directory of this project.
 
 Use `gulp` or `gulp serve` to run the game and watch for changes (except changes on the quizes).
 
