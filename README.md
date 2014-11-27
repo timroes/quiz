@@ -9,7 +9,7 @@ How to use
 *Requirements: Python (2.7+), Modern Browser*
 
 If you just want to use it (and not developing for it) you can just download
-the most recent release from the [release page](../../releases) (not use in downloading the source code).
+the most recent release from the [release page](../../releases) (there is no use in downloading the source code).
 
 Unzip the file to a folder of your choice. You can now create multiple quizes
 in the `quizes` subdirectory (see below).
