@@ -23,7 +23,7 @@ gulp.task('assets', function() {
 		.pipe(gulp.dest('build'));
 });
 
-gulp.task('build', ['assets', 'html', 'js', 'libs', 'python', 'quizes', 'styles', 'templates']);
+gulp.task('build', ['assets', 'html', 'js', 'libs', 'python', 'quizzes', 'styles', 'templates']);
 
 gulp.task('clean', function(cb) {
 	return gulp.src('./build', { read: false })
@@ -59,13 +59,13 @@ gulp.task('libs', function() {
 });
 
 gulp.task('package', ['build'], function() {
-	return gulp.src(['build/**', '!build/quizes/list.json'])
+	return gulp.src(['build/**', '!build/quizzes/list.json'])
 		.pipe(zip(pack.name + '-' + pack.version + '.zip'))
 		.pipe(gulp.dest('dist'));
 });
 
 gulp.task('package-noquiz', ['build'], function() {
-	return gulp.src(['build/**', '!build/quizes/**', 'build/quizes/.keep'], { base: 'build' })
+	return gulp.src(['build/**', '!build/quizzes/**', 'build/quizzes/.keep'], { base: 'build' })
 		.pipe(zip(pack.name + '-' + pack.version + '.zip'))
 		.pipe(gulp.dest('dist'));
 });
@@ -75,16 +75,16 @@ gulp.task('python', function() {
 		.pipe(gulp.dest('build'));
 });
 
-gulp.task('quizes', function() {
-	return gulp.src(['quizes/**', 'quizes/.keep'])
-		.pipe(gulp.dest('build/quizes/'));
+gulp.task('quizzes', function() {
+	return gulp.src(['quizzes/**', 'quizzes/.keep'])
+		.pipe(gulp.dest('build/quizzes/'));
 });
 
-gulp.task('quizlist', ['quizes'], function() {
-	var quizes = fs.readdirSync('quizes/').filter(function(file) {
-		return fs.statSync('quizes/' + file).isDirectory();
+gulp.task('quizlist', ['quizzes'], function() {
+	var quizzes = fs.readdirSync('quizzes/').filter(function(file) {
+		return fs.statSync('quizzes/' + file).isDirectory();
 	});
-	fs.writeFile('build/quizes/list.json', JSON.stringify(quizes));
+	fs.writeFile('build/quizzes/list.json', JSON.stringify(quizzes));
 });
 
 gulp.task('serve', ['build', 'quizlist'], function() {
