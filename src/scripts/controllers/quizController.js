@@ -85,16 +85,16 @@ angular.module("devquiz")
 	});
 
 	$scope.onKeyPress = function(ev) {
-		if (ev.keyCode === config.keys.next) {
+		if (ev.keyCode === config.keys.next || ev.which === config.keys.next) {
 			onNext();
-		} else if (ev.keyCode === config.keys.correct) {
+		} else if (ev.keyCode === config.keys.correct || ev.which === config.keys.correct) {
 			onRight();
-		} else if (ev.keyCode === config.keys.wrong) {
+		} else if (ev.keyCode === config.keys.wrong || ev.which === config.keys.wrong) {
 			onWrong();
-		} else if (ev.keyCode === config.keys.finish) {
+		} else if (ev.keyCode === config.keys.finish || ev.which === config.keys.finish) {
 			$scope.phase = 'end';
 		} else {
-			var team = teamService.getTeamByKey(ev.keyCode);
+			var team = teamService.getTeamByKey(ev.keyCode || ev.which);
 			if (team) {
 				onTeamKey(team);
 			}
