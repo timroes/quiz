@@ -85,7 +85,7 @@ angular.module("devquiz")
 	});
 
 	$scope.onKeyPress = function(ev) {
-		if (ev.keyCode === config.key.next || ev.which === config.keys.next) {
+		if (ev.keyCode === config.keys.next || ev.which === config.keys.next) {
 			onNext();
 		} else if (ev.keyCode === config.keys.correct || ev.which === config.keys.correct) {
 			onRight();
