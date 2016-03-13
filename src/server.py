@@ -1,5 +1,4 @@
-#! /usr/bin/env python2
-
+#! /usr/bin/env python2/
 import os
 import json
 from SimpleHTTPServer import SimpleHTTPRequestHandler
@@ -12,13 +11,13 @@ class QuizHTTPHandler(SimpleHTTPRequestHandler):
   #   SimpleHTTPRequestHandler.__init__(self)
   def do_GET(self):
     """
-      If the user requested the quizes/list.json file return an array of all quiz directory names,
+      If the user requested the quizzes/list.json file return an array of all quiz directory names,
       otherwise just pass the call to the parent class, to do a regular request.
     """
-    if self.path == "/quizes/list.json":
-      quizes = [q for q in os.listdir('quizes/') \
-        if os.path.isdir('quizes/' + q) and os.path.isfile('quizes/' + q + '/quiz.json')]
-      self.send_json(quizes)
+    if self.path == "/quizzes/list.json":
+      quizzes = [q for q in os.listdir('quizzes/') \
+        if os.path.isdir('quizzes/' + q) and os.path.isfile('quizzes/' + q + '/quiz.json')]
+      self.send_json(quizzes)
       pass
     else:
       SimpleHTTPRequestHandler.do_GET(self)

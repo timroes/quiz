@@ -21,6 +21,7 @@ angular.module("devquiz")
 			nextQuestion();
 		} else if ($scope.phase === 'question') {
 			$scope.phase = 'solution';
+
 		}
 	}
 
