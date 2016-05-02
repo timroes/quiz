@@ -20,7 +20,7 @@ angular.module('devquiz')
 			};
 
 			scope.keypress = function(ev) {
-				scope.ngModel = ev.keyCode;
+				scope.ngModel = ev.which || ev.keyCode;
 				ev.preventDefault();
 				ev.stopPropagation();
 				element.blur();

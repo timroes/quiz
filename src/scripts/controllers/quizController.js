@@ -21,6 +21,7 @@ angular.module("devquiz")
 			nextQuestion();
 		} else if ($scope.phase === 'question') {
 			$scope.phase = 'solution';
+
 		}
 	}
 
@@ -57,7 +58,7 @@ angular.module("devquiz")
 		}
 	}
 
-	$http.get('quizes/' + quizId + '/quiz.json')
+	$http.get('quizzes/' + quizId + '/quiz.json')
 	.then(function(response) {
 		$scope.quiz = response.data;
 		startQuiz();
@@ -65,7 +66,7 @@ angular.module("devquiz")
 
 	$scope.$watch('question', function(question) {
 		if(question && question.image) {
-			$scope.questionImg = '/quizes/' + quizId + '/' + question.image;
+			$scope.questionImg = '/quizzes/' + quizId + '/' + question.image;
 			$scope.solution = question.solution;
 		} else {
 			$scope.questionImg = '';
@@ -85,16 +86,16 @@ angular.module("devquiz")
 	});
 
 	$scope.onKeyPress = function(ev) {
-		if (ev.keyCode === config.keys.next) {
+		if (ev.keyCode === config.keys.next || ev.which === config.keys.next) {
 			onNext();
-		} else if (ev.keyCode === config.keys.correct) {
+		} else if (ev.keyCode === config.keys.correct || ev.which === config.keys.correct) {
 			onRight();
-		} else if (ev.keyCode === config.keys.wrong) {
+		} else if (ev.keyCode === config.keys.wrong || ev.which === config.keys.wrong) {
 			onWrong();
-		} else if (ev.keyCode === config.keys.finish) {
+		} else if (ev.keyCode === config.keys.finish || ev.which === config.keys.finish) {
 			$scope.phase = 'end';
 		} else {
-			var team = teamService.getTeamByKey(ev.keyCode);
+			var team = teamService.getTeamByKey(ev.keyCode || ev.which);
 			if (team) {
 				onTeamKey(team);
 			}

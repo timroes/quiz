@@ -11,15 +11,15 @@ How to use
 If you just want to use it (and not developing for it) you can just download
 the most recent release from the [release page](../../releases) (there is no use in downloading the source code).
 
-Unzip the file to a folder of your choice. You can now create multiple quizes
-in the `quizes` subdirectory (see below).
+Unzip the file to a folder of your choice. You can now create multiple quizzes
+in the `quizzes` subdirectory (see below).
 
 To start the game, execute the `server.py` script. It will output an URL, that you
 can now open in a modern browser (most browsers will go into fullscreen on <kbd>F11</kbd>).
 
-### Create quizes
+### Create quizzes
 
-To create a new quiz, create a new folder (with a name of your choice) in the `quizes`
+To create a new quiz, create a new folder (with a name of your choice) in the `quizzes`
 directory (no matter if you are using a downloaded version or if you are developing
 with the source code).
 
@@ -55,7 +55,7 @@ The following item `type`s exists and can/must have the following fields:
 
 ### Play the game
 
-When opening the game URL you can choose one of the quizes you created.
+When opening the game URL you can choose one of the quizzes you created.
 
 #### Settings
 
@@ -103,6 +103,6 @@ Using Ubuntu you also need the nodejs-legacy package.
 
 All dependencies will be installed automatically if you do a `npm install` in the root directory of this project.
 
-Use `gulp` or `gulp serve` to run the game and watch for changes (except changes on the quizes).
+Use `gulp` or `gulp serve` to run the game and watch for changes (except changes on the quizzes).
 
-Use `gulp package` to package a zip file with your current quizes.
+Use `gulp package` to package a zip file with your current quizzes.

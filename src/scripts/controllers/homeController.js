@@ -7,8 +7,8 @@ angular.module('devquiz')
 		$location.path('/quiz/' + gameService.getActiveGameId());
 	}
 
-	$http.get('/quizes/list.json').then(function(response) {
-		$scope.quizes = response.data;
+	$http.get('/quizzes/list.json').then(function(response) {
+		$scope.quizzes = response.data;
 	});
 
 });
